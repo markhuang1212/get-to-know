@@ -13,7 +13,7 @@ def fetch_web(url: str):
     """Fetch text and links from a webpage. Call only one time per function call."""
     try:
         options = webdriver.ChromeOptions()
-        # options.add_argument("user-data-dir=/home/admin/.config/google-chrome")
+        options.add_argument('--headless')
         driver = webdriver.Chrome(options=options)
         driver.set_page_load_timeout(10)
         try:
